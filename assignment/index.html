@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Input Form</title>
+    <script>
+        function addField() {
+            const container = document.getElementById("inputs");
+            
+            const input = document.createElement("input");
+            input.type = "number";
+            input.name = "values";
+            input.placeholder = "Enter number";
+            input.required = true;
+
+            container.appendChild(document.createElement("br"));
+            container.appendChild(input);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Enter Numbers</h2>
+
+    <form action="/discount" method="post">
+        <div id="inputs">
+            <input type="number" name="values" placeholder="Enter number" required>
+        </div>
+
+        <br><br>
+
+        <button type="button" onclick="addField()">➕ Add More</button>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
